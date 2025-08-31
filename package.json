@@ -1,0 +1,49 @@
+{
+  "type": "module",
+  "name": "naim",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "build:vercel": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "payload": "payload",
+    "payload:generate:types": "payload generate:types"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^5.2.1",
+    "@payloadcms/db-postgres": "^3.52.0",
+    "@payloadcms/next": "3.52.0",
+    "@payloadcms/payload-cloud": "3.52.0",
+    "@payloadcms/richtext-lexical": "3.52.0",
+    "@payloadcms/storage-s3": "^3.52.0",
+    "@supabase/supabase-js": "^2.55.0",
+    "@types/nodemailer": "^7.0.0",
+    "embla-carousel-react": "^8.6.0",
+    "graphql": "^16.11.0",
+    "i": "^0.3.7",
+    "motion": "^12.23.12",
+    "next": "15.4.5",
+    "nodemailer": "^7.0.5",
+    "npm": "^11.5.2",
+    "payload": "3.52.0",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-hook-form": "^7.62.0",
+    "sharp": "^0.34.3",
+    "tailwind-merge": "^3.3.1",
+    "zod": "^4.0.17"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "prettier": "^3.6.2",
+    "prettier-plugin-tailwindcss": "^0.6.14",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}

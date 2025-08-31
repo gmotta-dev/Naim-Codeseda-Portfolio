@@ -1,0 +1,1 @@
+export type TLanguage = "en-US" | "es-ES";

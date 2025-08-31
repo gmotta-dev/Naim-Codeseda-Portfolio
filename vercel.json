@@ -1,0 +1,13 @@
+{
+  "buildCommand": "pnpm build:vercel",
+  "installCommand": "pnpm install",
+  "framework": "nextjs",
+  "functions": {
+    "src/app/api/[...slug]/route.ts": {
+      "maxDuration": 30
+    },
+    "src/app/api/graphql/route.ts": {
+      "maxDuration": 30
+    }
+  }
+}
