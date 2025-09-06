@@ -29,7 +29,7 @@ export default async function Footer(props: { params: TNextParams }) {
         <h2 className="text-center text-4xl font-extralight text-neutral-100 md:text-6xl">Naim Codeseda</h2>
         <div className="flex gap-4 md:gap-8">
           {socials.map((social, key) => (
-            <Link key={key} href={social.href} className="text-neutral-500 transition-colors hover:text-neutral-100">
+            <Link key={key} href={social.href} className="text-neutral-500 transition-colors hover:text-neutral-100" target="_blank" rel="noopener noreferrer">
               {social.icon}
             </Link>
           ))}
@@ -41,8 +41,8 @@ export default async function Footer(props: { params: TNextParams }) {
 }
 
 const socials = [
-  { href: "/", icon: <Icons.Carbon.Email /> },
-  { href: "/", icon: <Icons.Carbon.LogoInstagram /> },
+  { href: "mailto:Naimcodeseda.global@gmail.com", icon: <Icons.Carbon.Email /> },
+  { href: "https://www.instagram.com/naimcodesedat", icon: <Icons.Carbon.LogoInstagram /> },
   { href: "https://youtube.com/@naimcodesedatielas?si=iMKU7szuHm_wgIyV", icon: <Icons.Carbon.LogoYoutube /> },
-  { href: "/", icon: <Icons.Carbon.Phone /> },
+  { href: "https://wa.me/34673545141", icon: <Icons.Carbon.Phone /> },
 ];

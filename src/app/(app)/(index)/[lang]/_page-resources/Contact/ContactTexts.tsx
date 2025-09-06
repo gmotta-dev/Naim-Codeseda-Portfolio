@@ -32,11 +32,11 @@ export default async function ContactTexts(props: { params: TNextParams }) {
 }
 
 const contactInfo = [
-  { icon: Icons.Carbon.Email, label: "naim.codaseda@gmail.com", href: "mailto:naim.codaseda@gmail.com" },
-  { icon: Icons.Carbon.Phone, label: "+201020202020", href: "tel:+201020202020" },
+  { icon: Icons.Carbon.Email, label: "Naimcodeseda.global@gmail.com", href: "mailto:Naimcodeseda.global@gmail.com" },
+  { icon: Icons.Carbon.Phone, label: "+34673545141", href: "tel:+34673545141" },
   {
     icon: Icons.Carbon.Location,
-    label: "Galicia, Spain",
+    label: "Spain - Taiwan",
     className: "hidden lg:flex",
     href: "https://www.google.com/maps/place/Galicia,+Spain/@42.8828822,-9.1398225,8z/data=!3m1!4b1!4m5!3m4!1s0xd2e6a86ce74b089:0x71496539f3297537!8m2!3d42.8828822!4d-8.5375375",
   },
