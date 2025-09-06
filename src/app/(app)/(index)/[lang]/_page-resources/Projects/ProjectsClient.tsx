@@ -40,11 +40,11 @@ const Dots = (props: { selectedIndex: number; setSelectedIndex: (index: number) 
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
   const progressRef = useRef<NodeJS.Timeout | null>(null);
 
-  // Auto-advance projects every 15 seconds
+  // Auto-advance projects every 20 seconds
   useEffect(() => {
     if (!autoAdvance) return;
     //@ts-ignore
-    intervalRef.current = setInterval(() => props.setSelectedIndex((prev) => (prev + 1) % props.projects.length), 15000);
+    intervalRef.current = setInterval(() => props.setSelectedIndex((prev) => (prev + 1) % props.projects.length), 20000);
 
     return () => {
       if (intervalRef.current) clearInterval(intervalRef.current);
@@ -55,7 +55,7 @@ const Dots = (props: { selectedIndex: number; setSelectedIndex: (index: number) 
   useEffect(() => {
     if (!autoAdvance) return;
     setTimeProgress(0);
-    progressRef.current = setInterval(() => setTimeProgress((prev) => (prev >= 100 ? 0 : prev + 1)), 100);
+    progressRef.current = setInterval(() => setTimeProgress((prev) => (prev >= 100 ? 0 : prev + 1)), 200);
 
     return () => {
       if (progressRef.current) clearInterval(progressRef.current);
