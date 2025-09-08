@@ -16,18 +16,27 @@ export default function MediaPopUp(props: {
   const popUpStates = use(popUpCTX);
 
   const isYT = props.media.includes("youtube");
+  const isShorts = props.media.includes("youtube.com/shorts/");
   const videoId = getYTVideoID(props.media);
 
-  const imageSrc = isYT ? `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg` : props.media;
+  const imageSrc = isYT ? (isShorts ? `https://img.youtube.com/vi/${videoId}/hqdefault.jpg` : `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`) : props.media;
 
   const media = isYT ? `https://www.youtube.com/embed/${videoId}` : props.media;
+
+  console.log(props.media);
 
   return (
     <div
       className={twMerge("relative cursor-pointer", props.classNames?.container)}
-      onClick={() => popUpStates.setPopUpContent(<PopUpContent media={media} alt={props.alt} sizes={props.sizes} />)}
+      onClick={() => popUpStates.setPopUpContent(<PopUpContent media={media} alt={props.alt} sizes={props.sizes} isShorts={isShorts} />)}
     >
-      <Image src={imageSrc} alt={props.alt} width={props.sizes.closed.width} height={props.sizes.closed.height} className={twMerge("h-full w-full object-cover", props.classNames?.image)} />
+      <Image
+        src={imageSrc}
+        alt={props.alt}
+        width={props.sizes.closed.width}
+        height={props.sizes.closed.height}
+        className={twMerge("h-full w-full object-cover", props.classNames?.image)}
+      />
 
       {isYT && (
         <Fragment>
@@ -39,7 +48,7 @@ export default function MediaPopUp(props: {
   );
 }
 
-const PopUpContent = (props: { media: string; alt: string; sizes: { closed: { width: number; height: number }; open: { width: number; height: number } } }) => {
+const PopUpContent = (props: { media: string; alt: string; sizes: { closed: { width: number; height: number }; open: { width: number; height: number } }; isShorts: boolean }) => {
   const Element = (rest: any) =>
     props.media.includes("youtube") ? (
       <iframe
@@ -48,10 +57,18 @@ const PopUpContent = (props: { media: string; alt: string; sizes: { closed: { wi
         allowFullScreen
         src={props.media + "?autoplay=1&mute=1"}
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        className="aspect-video h-[500px] w-full max-w-[890px]"
+        className={twMerge(props.isShorts ? "aspect-[9/16] h-[600px] w-full max-w-[340px]" : "aspect-video h-[500px] w-full max-w-[890px]")}
       />
     ) : (
-      <Image {...rest} quality={100} src={props.media} alt={props.alt} width={props.sizes.open.width} height={props.sizes.open.height} className={twMerge("max-w-[350px] md:max-w-none", rest.className)} />
+      <Image
+        {...rest}
+        quality={100}
+        src={props.media}
+        alt={props.alt}
+        width={props.sizes.open.width}
+        height={props.sizes.open.height}
+        className={twMerge("max-w-[350px] md:max-w-none", rest.className)}
+      />
     );
 
   return <Element />;
