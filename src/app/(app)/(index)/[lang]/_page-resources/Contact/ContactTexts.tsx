@@ -7,7 +7,7 @@ export default async function ContactTexts(props: { params: TNextParams }) {
 
   return (
     <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
-      <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-neutral-900 px-6 font-medium text-neutral-400 lg:left-6 lg:translate-x-0">{texts.absoluteText[lang]}</span>
+      <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-neutral-900 px-6 font-medium text-neutral-400 lg:left-6 lg:translate-x-0 whitespace-nowrap">{texts.absoluteText[lang]}</span>
 
       <h4 className="mt-8 text-4xl font-extralight text-neutral-100 md:mt-0 md:text-6xl lg:text-8xl">{texts.title[lang]}</h4>
 

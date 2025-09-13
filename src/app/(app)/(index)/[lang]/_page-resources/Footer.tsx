@@ -35,7 +35,7 @@ export default async function Footer(props: { params: TNextParams }) {
           ))}
         </div>
       </ContentWrapper>
-      <p className="mt-4 text-center text-sm text-neutral-500">©2025 Naim Codesada. All Rights reserved</p>
+      <p className="mt-4 text-center text-sm text-neutral-500">©2025 Naim Codeseda. All Rights reserved</p>
     </footer>
   );
 }
