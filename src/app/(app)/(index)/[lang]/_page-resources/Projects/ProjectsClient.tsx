@@ -101,7 +101,7 @@ const Dots = (props: { selectedIndex: number; setSelectedIndex: (index: number) 
 
       <div className="flex gap-4 min-[1340px]:flex-col">
         {props.projects.map((_, index) => (
-          <div key={index} className="relative">
+          <div key={index} className="relative flex items-center justify-center">
             <button
               onClick={() => scrollTo(index)}
               className={`h-4 w-4 cursor-pointer rounded-full transition-all duration-300 ${
@@ -110,7 +110,7 @@ const Dots = (props: { selectedIndex: number; setSelectedIndex: (index: number) 
             />
             {/* Progress ring for current project */}
             {index === props.selectedIndex && (
-              <svg className="absolute top-[9.1px] left-1/2 h-9 w-9 -translate-x-1/2 -translate-y-1/2 -rotate-90 transform" viewBox="0 0 16 16">
+              <svg className="absolute h-9 w-9 -rotate-90" viewBox="0 0 16 16">
                 <circle cx="8" cy="8" r="6" stroke="currentColor" strokeWidth="1" fill="none" className="text-neutral-300" />
                 <circle
                   cx="8"

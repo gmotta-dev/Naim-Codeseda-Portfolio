@@ -43,7 +43,7 @@ const contactInfo = [
 ];
 
 const texts = {
-  absoluteText: { ["en-US"]: "LETS GET IN TOUTCH", ["es-ES"]: "CONECTÉMOS" },
+  absoluteText: { ["en-US"]: "LETS GET IN TOUCH", ["es-ES"]: "CONECTÉMOS" },
   title: { ["en-US"]: "CONTACT", ["es-ES"]: "CONTACTO" },
   description: {
     ["en-US"]: "I'm always interested in new collaborations, performance opportunities, and creative projects. Let's discuss how we can work together.",
