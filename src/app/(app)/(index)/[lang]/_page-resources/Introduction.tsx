@@ -22,7 +22,8 @@ export default async function Introduction(props: { params: Promise<Record<strin
 }
 
 const Header = async (props: { params: Promise<Record<string, string>> }) => {
-  const { title, description, button, buttonSecondary } = languages[await getLanguage(props.params)];
+  const lang = await getLanguage(props.params);
+  const { title, description, button, buttonSecondary } = languages[lang];
 
   return (
     <header className="w-full max-w-[452px]">
@@ -33,8 +34,8 @@ const Header = async (props: { params: Promise<Record<string, string>> }) => {
       <StaggeredFade element="h1" text="Naim Codeseda" className="text-5xl font-extralight md:text-8xl" />
       <StaggeredFade element="p" text={description} className="mt-4 font-light text-neutral-700 md:text-lg" duration={0.02} />
       <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 2.5 }} className="mt-8 flex gap-4">
-        <Clickables.Link href="/#projects">{button}</Clickables.Link>
-        <Clickables.Link href="/#contact" stylization="secondary">
+        <Clickables.Link href={`/${lang}#projects`}>{button}</Clickables.Link>
+        <Clickables.Link href={`/${lang}#contact`} stylization="secondary">
           {buttonSecondary}
         </Clickables.Link>
       </motion.div>
@@ -82,7 +83,7 @@ const languages = {
   },
   "es-ES": {
     title: "HOLA, SOY",
-    description: "Artista de performance con experiencia como bailarina, artista marcial, coreógrafo y artista de escenario.",
+    description: "Bailarín · Artista Marcial · Creador Escénico",
     button: "VER TRABAJO",
     buttonSecondary: "CONTACTAR",
   },

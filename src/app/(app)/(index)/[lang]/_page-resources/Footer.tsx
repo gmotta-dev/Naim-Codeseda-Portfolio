@@ -44,5 +44,5 @@ const socials = [
   { href: "mailto:Naimcodeseda.global@gmail.com", icon: <Icons.Carbon.Email /> },
   { href: "https://www.instagram.com/naimcodesedat", icon: <Icons.Carbon.LogoInstagram /> },
   { href: "https://youtube.com/@naimcodesedatielas?si=iMKU7szuHm_wgIyV", icon: <Icons.Carbon.LogoYoutube /> },
-  { href: "https://wa.me/34673545141", icon: <Icons.Carbon.Phone /> },
+  { href: "https://www.linkedin.com/in/naim-codeseda-tielas-5508b0303", icon: <Icons.Carbon.LogoLinkedin /> },
 ];

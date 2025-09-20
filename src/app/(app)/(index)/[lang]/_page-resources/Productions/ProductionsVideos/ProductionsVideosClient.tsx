@@ -98,7 +98,7 @@ const VideosCarousel = (props: { productions: Production[]; setSelectedProductio
       <div ref={emblaRef} className="col-start-1 col-end-4 row-start-1 flex overflow-hidden">
         <div className="flex">
           {props.productions.map((production, key) => {
-            const isYT = production.youtubeUrl.includes("youtube");
+            const isYT = production.youtubeUrl.includes("youtube") || production.youtubeUrl.includes("youtu.be");
             const videoId = getYTVideoID(production.youtubeUrl);
 
             const imageSrc = isYT ? `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg` : "";

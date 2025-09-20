@@ -8,10 +8,10 @@ export const generateMetadata = async (props: TNextPage): Promise<Metadata> => {
 
   let description = "";
 
-  if (lang === "en-US") description = "Naim Codeseda is a software engineer and designer based in Spain.";
-  else description = "Naim Codeseda es un ingeniero de software y diseñador basado en España.";
+  if (lang === "en-US") description = "Naim Codeseda is a dancer, martial artist, and creative based in Spain.";
+  else description = "Naim Codeseda es un bailarín, artista marcial y creativo basado en España.";
 
-  return { title: "Naim Codeseda", description };
+  return { title: "Naim Codeseda", description, openGraph: { images: [{ url: "/images/seo.webp" }] } };
 };
 
 export default function Home(props: TNextPage) {
