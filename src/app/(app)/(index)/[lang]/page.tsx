@@ -11,7 +11,7 @@ export const generateMetadata = async (props: TNextPage): Promise<Metadata> => {
   if (lang === "en-US") description = "Naim Codeseda is a dancer, martial artist, and creative based in Spain.";
   else description = "Naim Codeseda es un bailarín, artista marcial y creativo basado en España.";
 
-  return { title: "Naim Codeseda", description, openGraph: { images: [{ url: "/images/seo.webp" }] } };
+  return { title: "Naim Codeseda", description, openGraph: { images: [{ url: "/images/seo.webp" }] }, icons: { icon: [{ url: "/favicon.ico" }] } };
 };
 
 export default function Home(props: TNextPage) {
