@@ -36,7 +36,7 @@ const contactInfo = [
   { icon: Icons.Carbon.LogoLinkedin, label: "Naim Codeseda Tielas", href: "https://www.linkedin.com/in/naim-codeseda-tielas-5508b0303" },
   {
     icon: Icons.Carbon.Location,
-    label: { "en-US": "Spain - Taiwan", "es-ES": "España, Taiwán" },
+    label: { "en-US": "Spain - Taiwan", "es-ES": "España - Taiwán" },
     className: "hidden lg:flex",
     href: "https://www.google.com/maps/place/Galicia,+Spain/@42.8828822,-9.1398225,8z/data=!3m1!4b1!4m5!3m4!1s0xd2e6a86ce74b089:0x71496539f3297537!8m2!3d42.8828822!4d-8.5375375",
   },

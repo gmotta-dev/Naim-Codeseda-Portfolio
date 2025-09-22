@@ -63,14 +63,14 @@ const texts = {
 
   description: {
     "en-US":
-      "I work with trusted production companies to design performances tailored to different audiences, formats, and venues, always aiming for results that connect and make an impact.",
+      "As a choreographer and artistic director, I collaborate with talents from around the world to transform ideas into unforgettable shows.",
     "es-ES":
-      "Como coreógrafo e diretor artístico, colaboro com talentos de todo o mundo para transformar ideias em espetáculos inesquecíveis.",
+      "Como coreógrafo y director artístico, colaboro con talentos de todo el mundo para transformar ideas en espectáculos inolvidables.",
   },
 
   subDescription: {
-    "en-US": "If you’re looking for a choreographer or artist for your next event, show, or creative project, get in touch. I’d be happy to help bring your idea to life.",
-    "es-ES": "Nesta seção você encontrará uma amostra dos projetos de alguns dos meus colaboradores mais próximos, com quem trabalho para levar ao público os melhores espetáculos e experiências.",
+    "en-US": "In this section, you will find a selection of projects from some of my closest collaborators, with whom I work to bring the best performances and experiences to the audience.",
+    "es-ES": "En esta sección encontrarás una muestra de los proyectos de algunos de mis colaboradores más cercanos, con quienes trabajo para llevar al público los mejores espectáculos y experiencias.",
   },
 };
 

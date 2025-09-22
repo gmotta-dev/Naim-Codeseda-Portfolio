@@ -57,7 +57,7 @@ const YTVideo = async () => {
         allowFullScreen
         title="Introduction Video"
         className="h-full w-full overflow-hidden rounded-md"
-        src={videoContent.youtubeUrl + "?autoplay=1&mute=1&controls=0"}
+        src={videoContent.youtubeUrl + "?autoplay=1&mute=1"}
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       />
     );
@@ -77,13 +77,13 @@ const YTVideo = async () => {
 const languages = {
   "en-US": {
     title: "HELLO, I'M",
-    description: "Performing artist with experience as a dancer, martial artist, choreographer, and stage performer.",
+    description: "Dancer · Martial Artist · Artistic Director",
     button: "VIEW PROJECTS",
     buttonSecondary: "GET IN TOUCH",
   },
   "es-ES": {
     title: "HOLA, SOY",
-    description: "Bailarín · Artista Marcial · Creador Escénico",
+    description: "Bailarín · Artista Marcial · Director Artístico",
     button: "VER TRABAJO",
     buttonSecondary: "CONTACTAR",
   },
