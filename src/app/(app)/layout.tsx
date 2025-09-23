@@ -13,9 +13,9 @@ export const metadata: Metadata = { title: "Create Next App", description: "Gene
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      {/* <head>
-        <script crossOrigin="anonymous" src="//unpkg.com/react-scan/dist/auto.global.js" />
-      </head> */}
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} bg-[#FAFAFA] antialiased`}>
         <ToastProvider>
           <PopUpProvider>
