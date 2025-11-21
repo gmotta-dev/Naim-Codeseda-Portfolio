@@ -20,7 +20,7 @@ export default function ProjectsClient(props: { projects: Project[] }) {
       <Dots selectedIndex={selectedIndex} setSelectedIndex={setSelectedIndex} projects={props.projects} />
 
       <motion.div
-        className="flex flex-col items-start gap-12 lg:flex-row"
+        className="flex flex-col items-start gap-12 lg:flex-row w-full"
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "0px 0px -300px 0px" }}
