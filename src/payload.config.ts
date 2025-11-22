@@ -21,7 +21,6 @@ export default buildConfig({
   sharp,
   admin: { user: Users.slug, importMap: { baseDir: path.resolve(dirname) } },
   collections: [Users, Media, IntroductionVideo, CV, AboutMe, Projects, Productions],
-  upload: { limits: { fileSize: 25000000 } },
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || "",
   typescript: { outputFile: path.resolve(dirname, "payload-types.ts") },
